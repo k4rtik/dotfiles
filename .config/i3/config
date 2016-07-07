@@ -158,7 +158,7 @@ bar {
 
 exec --no-startup-id rescuetime
 exec --no-startup-id pidgin
-exec --no-startup-id dropbox start
+#exec --no-startup-id dropbox start
 
 for_window [class="Nautilus" instance="file_progress"] floating enable
 for_window [class="Pidgin" instance="Pidgin"] floating enable
@@ -172,7 +172,7 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #d
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 # Media player controls
-bindsym XF86AudioPlay exec playerctl play
-bindsym XF86AudioPause exec playerctl pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
+#bindsym XF86AudioPlay exec playerctl play
+#bindsym XF86AudioPause exec playerctl pause
+#bindsym XF86AudioNext exec playerctl next
+#bindsym XF86AudioPrev exec playerctl previous
