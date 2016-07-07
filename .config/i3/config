@@ -36,7 +36,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec j4-dmenu-desktop
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -153,10 +153,26 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
-        tray_output primary
+        #tray_output primary
 }
 
-exec --no-startup-id nm-applet
-#exec --no-startup-id gnome-sound-applet
 exec --no-startup-id rescuetime
+exec --no-startup-id pidgin
 exec --no-startup-id dropbox start
+
+for_window [class="Nautilus" instance="file_progress"] floating enable
+for_window [class="Pidgin" instance="Pidgin"] floating enable
+for_window [class="google-chrome" instance="crx_hfilbmblidibnmifcabmolhlaekpfhak"] floating enable
+
+bindsym Control+$mod+l exec i3lock -n -d -c 000000
+
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
