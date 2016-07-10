@@ -117,3 +117,7 @@ if ! shopt -oq posix; then
 fi
 
 eval $(keychain --eval --quiet --nogui id_rsa)
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
