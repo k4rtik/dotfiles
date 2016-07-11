@@ -125,6 +125,8 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
+export PATH="$HOME/.local/bin:$PATH"
+
 # Path to the bash it configuration
 export BASH_IT="/home/kartik/.bash_it"
 
