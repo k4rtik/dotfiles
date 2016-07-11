@@ -116,6 +116,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+export VISUAL=vim
+export EDITOR=vim
+
 eval $(keychain --eval --quiet --nogui id_rsa)
 
 export PATH="$HOME/.rbenv/bin:$PATH"
