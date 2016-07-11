@@ -168,7 +168,7 @@ bindsym Control+$mod+l exec i3lock -n -d -c 000000
 bindsym --release Print exec --no-startup-id scrot
 bindsym --release Shift+Print exec --no-startup-id scrot -s
 
-# Pulse Audio controls
+# Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -q sset Master,0 1+ unmute"
 bindsym XF86AudioLowerVolume exec --no-startup-id "amixer -q sset Master,0 1- unmute"
 bindsym XF86AudioMute exec --no-startup-id "amixer -q sset Master,0 toggle"
