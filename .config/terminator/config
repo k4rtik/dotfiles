@@ -1,6 +1,7 @@
 [global_config]
   borderless = True
   inactive_color_offset = 1.0
+  tab_position = hidden
   title_hide_sizetext = True
 [keybindings]
   switch_to_tab_1 = <Alt>1
