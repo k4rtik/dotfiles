@@ -160,6 +160,7 @@ exec --no-startup-id xrandr --dpi 112
 
 exec --no-startup-id rescuetime
 exec --no-startup-id pidgin
+exec --no-startup-id fluxgui
 #exec --no-startup-id dropbox start
 
 for_window [class="Nautilus" instance="file_progress"] floating enable
