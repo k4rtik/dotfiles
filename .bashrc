@@ -127,6 +127,9 @@ export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
 export PATH="$HOME/.local/bin:$PATH"
 
+export GOPATH=$HOME/.gowork
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+
 # Path to the bash it configuration
 export BASH_IT="/home/kartik/.bash_it"
 
