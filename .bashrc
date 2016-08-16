@@ -130,6 +130,8 @@ export PATH="$HOME/.local/bin:$PATH"
 export GOPATH=$HOME/.gowork
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # Path to the bash it configuration
 export BASH_IT="/home/kartik/.bash_it"
 
