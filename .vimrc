@@ -27,6 +27,7 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 Plugin 'Valloric/YouCompleteMe' 
 Plugin 'rdnetto/YCM-Generator'
+Plugin 'rust-lang/rust.vim'
 
 Plugin 'octol/vim-cpp-enhanced-highlight'
 " All of your Plugins must be added before the following line
@@ -219,5 +220,7 @@ colorscheme desert
 " YouCompleteMe config
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_autoclose_preview_window_after_completion = 1
+
+let g:rustfmt_autosave = 1
 
 set cino=(0
