@@ -144,7 +144,7 @@ export BASH_IT_THEME='zork'
 # export BASH_IT_REMOTE='bash-it'
 
 # Your place for hosting Git repos. I use this for private repos.
-export GIT_HOSTING='git@github.hpe.com'
+#export GIT_HOSTING='git@github.example.com'
 
 # Don't check mail when opening terminal.
 unset MAILCHECK
