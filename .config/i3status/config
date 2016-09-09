@@ -9,12 +9,14 @@
 general {
         colors = true
         interval = 5
+        markup = "pango"
 }
 
+order += "tztime berlin"
 order += "load"
 #order += "cpu_temperature 0"
-order += "disk /"
 order += "tztime kolkata"
+order += "disk /"
 order += "ethernet _first_"
 #order += "ipv6"
 order += "tztime local"
@@ -47,11 +49,18 @@ volume master {
 }
 
 tztime kolkata {
-    format = "%Y-%m-%d %H:%M %Z"
+        format = "<span foreground='#138808'>%time</span>"
+        format_time = "%Y-%m-%d %H:%M %Z"
         timezone = "Asia/Kolkata"
 }
 
+tztime berlin {
+        format = "<span foreground='#ffcc00'>%time</span>"
+        format_time = "%Y-%m-%d %H:%M %Z"
+        timezone = "Europe/Berlin"
+}
+
 cpu_temperature 0 {
-    format = "T:%degrees°C"
+        format = "T:%degrees°C"
         path = "/sys/devices/platform/coretemp.0/hwmon/hwmon1/temp2_input"
 }
