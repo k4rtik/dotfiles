@@ -1,7 +1,7 @@
 [global_config]
   borderless = True
   inactive_color_offset = 1.0
-  tab_position = hidden
+  scroll_tabbar = True
   title_hide_sizetext = True
 [keybindings]
   edit_window_title = None

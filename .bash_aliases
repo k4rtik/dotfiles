@@ -2,3 +2,4 @@ alias pip-upgrade="pip freeze --user --local | grep -v '^\-e' | cut -d = -f 1  |
 alias notes="cd ~/Projects/notes/2016"
 alias projects="cd ~/Projects"
 alias gp="git push origin master"
+alias gpr="git pull --rebase"

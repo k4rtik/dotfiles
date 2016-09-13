@@ -168,8 +168,8 @@ for_window [class="Pidgin" instance="Pidgin"] floating enable
 for_window [class="google-chrome" instance="crx_hfilbmblidibnmifcabmolhlaekpfhak"] floating enable
 
 bindsym Control+$mod+l exec i3lock -n -d -c 000000
-bindsym --release Print exec --no-startup-id scrot
-bindsym --release Shift+Print exec --no-startup-id scrot -s
+bindsym --release Print exec --no-startup-id scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/Pictures/'
+bindsym --release Shift+Print exec --no-startup-id scrot -s '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/Pictures/'
 
 # Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -q sset Master,0 1+ unmute"
