@@ -128,7 +128,7 @@ export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
 export GOPATH=$HOME/.gowork
-export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+export PATH="/usr/local/go/bin:$GOPATH/bin:$PATH"
 
 export PATH="$HOME/.cargo/bin:$PATH"
 

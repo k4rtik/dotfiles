@@ -222,5 +222,6 @@ let g:ycm_confirm_extra_conf = 0
 let g:ycm_autoclose_preview_window_after_completion = 1
 
 let g:rustfmt_autosave = 1
+let g:ycm_rust_src_path = '$HOME/Projects/rust/src'
 
 set cino=(0
