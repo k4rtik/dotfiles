@@ -132,6 +132,8 @@ export PATH="/usr/local/go/bin:$GOPATH/bin:$PATH"
 
 export PATH="$HOME/.cargo/bin:$PATH"
 
+export PATH="$HOME/.cabal/bin:/opt/cabal/1.24/bin:/opt/ghc/7.10.3/bin:$PATH"
+
 # Path to the bash it configuration
 export BASH_IT="/home/kartik/.bash_it"
 
