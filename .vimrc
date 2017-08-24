@@ -25,11 +25,22 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " different version somewhere else.
 "Plugin 'ascenator/L9', {'name': 'newL9'}
 
-Plugin 'Valloric/YouCompleteMe' 
-Plugin 'rdnetto/YCM-Generator'
-Plugin 'rust-lang/rust.vim'
+Plugin 'Valloric/YouCompleteMe'
+"Plugin 'rdnetto/YCM-Generator'
+Plugin 'ntpeters/vim-better-whitespace'
+"Plugin 'rust-lang/rust.vim'
 
 Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'majutsushi/tagbar'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'bling/vim-airline'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'craigemery/vim-autotag'
+Plugin 'pseewald/vim-anyfold'
+"Plugin 'Chiel92/vim-autoformat'
+"Plugin 'lyuts/vim-rtags'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 " To ignore plugin indent changes, instead use:
@@ -215,15 +226,43 @@ set lbr
 
 set incsearch
 
-colorscheme desert
+syntax enable
+set background=dark
+colorscheme solarized
 
 " YouCompleteMe config
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_autoclose_preview_window_after_completion = 1
 
-let g:rustfmt_autosave = 1
-let g:ycm_rust_src_path = expand('~/Projects/rust/src')
+"let g:rustfmt_autosave = 1
+"let g:ycm_rust_src_path = expand('~/Projects/rust/src')
 
 nnoremap <Leader>] :YcmCompleter GoTo<CR>
+nnoremap <Leader>[ :YcmCompleter FixIt<CR>
+nmap <F8> :TagbarToggle<CR>
+" other shortcuts (already mapped):
+" ^W }    Preview definition
+"  g ]    See all definitions
 
 set cino=(0
+set cc=100
+
+autocmd FileType c,cpp set softtabstop=8 shiftwidth=8 expandtab
+autocmd FileType python set softtabstop=4 shiftwidth=4 expandtab
+
+" NERDTree
+let g:nerdtree_tabs_open_on_console_startup=1
+let g:nerdtree_tabs_focus_on_files=1
+
+" nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
+" vnoremap <Space> zf
+
+let g:anyfold_activate=1
+let g:anyfold_fold_comments=0
+hi Folded term=NONE cterm=NONE
+set foldlevel=2
+
+let g:airline#extensions#whitespace#checks = [ 'indent', 'trailing', 'long' ]
+
+"au BufWrite * :Autoformat
+"source ~/.vim/plugins/cscope_maps.vim

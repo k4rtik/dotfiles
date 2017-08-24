@@ -19,6 +19,9 @@
   lg = log --graph --pretty=format:'%Cred%h%Creset %s%C(yellow)%d%Creset %Cgreen(%cr)%Creset [%an]' --abbrev-commit --date=relative
   alias = config --get-regexp ^alias\\.
 
+  # from Wei
+  glog = log --graph --abbrev-commit --name-status --format=fuller
+
 [color]
   # Use colors in Git commands that are capable of colored output when outputting to the terminal
   ui = auto
@@ -66,3 +69,5 @@
 
 [credential]
 	helper = cache --timeout=3600
+[init]
+	templatedir = ~/.git_template
