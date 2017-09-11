@@ -68,6 +68,4 @@
 	tool = meld
 
 [credential]
-	helper = cache --timeout=3600
-[init]
-	templatedir = ~/.git_template
+	helper = cache --timeout=604800
