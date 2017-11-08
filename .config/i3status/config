@@ -12,7 +12,6 @@ general {
         markup = "pango"
 }
 
-order += "tztime berlin"
 order += "load"
 #order += "cpu_temperature 0"
 order += "tztime kolkata"
@@ -49,7 +48,7 @@ volume master {
 }
 
 tztime kolkata {
-        format = "<span foreground='#138808'>%time</span>"
+        format = "<span foreground='#ff8808'>%time</span>"
         format_time = "%Y-%m-%d %H:%M %Z"
         timezone = "Asia/Kolkata"
 }
